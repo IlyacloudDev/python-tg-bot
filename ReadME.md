@@ -1,7 +1,7 @@
 # Converting Telegram Bot
 
 
-[Read in Russian](README_ru.md)
+[Read in Russian](ReadME_ru.md)
 ___
 
 
