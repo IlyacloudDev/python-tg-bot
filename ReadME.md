@@ -80,6 +80,9 @@ dollar ruble 35
 ```
 The bot will return the cost of 35 dollars in rubles.
 
+### An example of using it from a phone:
+
+<img src="images/IMG_7108.gif" alt="Demo GIF" width="250"/>
 
 ## Dependencies
 
