@@ -17,9 +17,14 @@ def info_bt(message):
 
 @bot.message_handler(commands=['values']) # показ доступных валют
 def check_currencies(message):
-    avaible_currencies = "Доступные валюты:"
+    ru_version = 'Доступные валюты (на русском)💵:'
+    en_version = 'Available currencies (in english)💵:'
     for key in lst_ofcurrency.keys(): # проходимся по ключам списка из конфига
-        avaible_currencies = "\n".join((avaible_currencies, key)) # через перенос строки будет печатать наши валюты
+        if key[0] not in 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz':
+            ru_version = "\n📊".join((ru_version, key)) # через перенос строки будет печатать наши валюты
+        else:
+            en_version = "\n📊".join((en_version, key))
+    avaible_currencies = ru_version + "\n\n" + en_version
     bot.send_message(message.chat.id, avaible_currencies)
 
 
